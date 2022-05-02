@@ -1,0 +1,26 @@
+<div class="card">
+  <div class="card__image"></div>
+
+  <div style="float: right;">
+    <ng-content select="[cardHeader]"></ng-content>
+  </div>
+
+  <div
+    class="card__image--hover"
+    [ngStyle]="{ 'background-image': 'url(' + image + ')' }"
+  ></div>
+
+  <div class="card__info" title="{{ description }}">
+    <div class="card__pre-title">
+      <ng-content select="[preTitle]"></ng-content>
+    </div>
+
+    <div class="card__title">
+      <ng-content select="[title]"></ng-content>
+    </div>
+
+    <div class="card__footer">
+      <ng-content select="[footer]"></ng-content>
+    </div>
+  </div>
+</div>
